@@ -9,7 +9,7 @@ import developer from "../../../public/developer.json";
 export default function Hero() {
 
     const [mainText, setMainText] = useState(
-        `Hi, Iam Abdalrhman Mohamed, Front-End developer looking for a challenging opportunity in the field of Front-end development where I can utilize my skills`
+        `Full Stack Web Developer skilled in building modern, scalable web applications using React, Next.js, and Node.js. Experienced in crafting dynamic frontends with React, Vite, Tailwind CSS, and efficient backends with Express.js, NestJS, and MongoDB/MySQL. Proficient in implementing RESTful APIs, authentication with JWT, and database performance tuning. Delivered multiple full-stack projects including e-commerce platforms with features like product filtering, shopping carts, and secure user management. Enthusiastic about clean code, agile methodologies, and delivering high-quality solutions in collaborative team environments.`
     )
     const [isOpen, setIsOpen] = useState(false)
     // const [showCv, setShowCv] = useState(false)
@@ -60,10 +60,10 @@ export default function Hero() {
                         <img onClick={() => setIsOpen(!isOpen)} className='cursor-pointer w-40 rounded-full border border-[#414148]' src={mainPhoto} alt="main Img" />
                         <i className="fa-solid fa-check"></i>
                     </div>
-                    <motion.h1 variants={pvariants} initial='hidden' whileInView='visible' transition={{ duration: 2 }} className='text-3xl capitalize'>{mainText.split('').map((chr, index) => <motion.span key={index} variants={svariants}>{chr}</motion.span>)}</motion.h1>
+                    <motion.h1 variants={pvariants} initial='hidden' whileInView='visible' transition={{ duration: 2 }} className='text-lg dark:text-slate-500 text-slate-900  capitalize'>{mainText.split('').map((chr, index) => <motion.span key={index} variants={svariants}>{chr}</motion.span>)}</motion.h1>
                     <p className='text-slate-800 dark:text-slate-400 my-5'></p>
                     <div className='my-10 z-50'>
-                        <a ref={cv} href='Abdalrhman Mohamed.pdf' download={true} className='w-40 from-slate-400 to-emerald-400 hover:from-emerald-400 hover:to-slate-400 font-semibold hover:to-slate-700 rounded-lg px-10 py-4 bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700'>Download CV</a>
+                        <a ref={cv} href='Abdalrhman-Mohamed-FullStack.pdf' download={true} className='w-40 from-slate-400 to-emerald-400 hover:from-emerald-400 font-semibold hover:to-slate-700 rounded-lg px-10 py-4 bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700'>Download CV</a>
                     </div>
                     <ul className='flex gap-5'>
                         <motion.li whileHover={{ rotate: '360deg', scale: 1.1, color: '#2bd5b6', scale: 1.5 }} transition={{ duration: 1 }}><a target='_blank' href={'https://github.com/Aminoo0'}><i className="fa-brands fa-github text-2xl cursor-pointer text-slate-900 dark:text-slate-100"></i></a></motion.li>
