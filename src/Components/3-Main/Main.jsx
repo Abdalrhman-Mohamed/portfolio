@@ -17,11 +17,14 @@ export default function Main() {
         { id: '2', category: 'javascript', img: card2, title: 'Weather App', link: 'https://github.com/Aminoo0/Weather', webSite: 'https://aminoo0.github.io/Weather/', desc: 'recipes web site Using HTML, CSS, Tailwind, JavaScript and Api' },
         { id: '3', category: 'javascript', img: card2, title: 'Quiz', link: 'https://github.com/Aminoo0/Quiz', webSite: 'https://aminoo0.github.io/Quiz/', desc: 'Quiz App Using HTML, CSS, Tailwind, JavaScript and Api' },
         { id: '4', category: 'javascript', img: card2, title: 'Yummii', link: 'https://github.com/Aminoo0/Yummii', webSite: 'https://aminoo0.github.io/Yummii/', desc: 'Yummi  recipes web site Using HTML, CSS, Tailwind, JavaScript and Api' },
-        { id: '5', category: 'html', img: card3, title: '', link: '', webSite: '' },
+        // { id: '5', category: 'html', img: card3, title: '', link: '', webSite: '' },
         { id: '6', category: 'react', img: card4, title: 'E-Commerce-Fresh-Cart', link: 'https://github.com/Aminoo0/E-Commerce-Fresh-Cart', webSite: 'https://aminoo0.github.io/E-Commerce-Fresh-Cart/', desc: 'E-Commerce App Using HTML, CSS, Tailwind, JavaScript, Api, React.js, React-Query , State Management' },
         { id: '7', category: 'react', img: card4, title: 'Alasayal-app', link: 'https://github.com/Aminoo0/Alasayal-app', webSite: 'https://`alasayal-app.vercel.app', desc: 'Using HTML, CSS, Tailwind, JavaScript, React.js, framer-motion, form-spree, ' },
         { id: '8', category: 'react', img: card6, title: 'Alasayal-app-Engilsh', link: 'https://github.com/Aminoo0/Alasayal-app-Engilsh', webSite: 'https://alasayal-app-engilsh.vercel.app', desc: 'Using HTML, CSS, Tailwind, JavaScript, React.js, framer-motion, form-spree, ' },
         { id: '9', category: 'next', img: card5, title: 'On-DM', link: 'https://github.com/Aminoo0/on-dm', webSite: 'https://on-dm.vercel.app/', desc: 'Using HTML, CSS, Tailwind, JavaScript, Next.js, framer-motion, ' },
+        { id: '10', category: 'react', img: card5, title: 'Royal Mandarin', link: 'https://github.com/Aminoo0/on-dm', webSite: 'https://hotel-site-lemon.vercel.app/', desc: 'Using HTML, CSS, Tailwind, JavaScript, react.js, framer-motion,Redux ' },
+        { id: '11', category: 'backEnd', img: card5, title: 'Learning-Management-System', link: 'https://github.com/KarimWagdi/Learning-Management-System', webSite: '', desc: 'Using Node js, Express' },
+        { id: '12', category: 'fullStack', img: card5, title: 'Chat-Ai-System', link: '', webSite: '', desc: 'Using Node js, Nest js, Socket io' },
     ]
     const [allProjects, setAllProjects] = useState(projects)
 
@@ -37,14 +40,16 @@ export default function Main() {
     }
 
     return (
-        <section className='flex flex-wrap md:p-16 lg:p-10 p-2'>
+        <section id='projects' className='flex flex-wrap md:p-16 lg:p-10 p-2'>
             <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full xl:w-1/4'>
                 <ul className='text-center font-semibold flex flex-wrap justify-between'>
                     <li onClick={() => allProject('1', projects)} className={`${showactive === '1' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>All Projects</li>
-                    <li onClick={() => filterProject('2', "javascript")} className={`${showactive === '2' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>Java Script</li>
-                    <li onClick={() => filterProject('3', "html")} className={`${showactive === '3' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>HTML & CSS</li>
+                    <li onClick={() => filterProject('7', "fullStack")} className={`${showactive === '7' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>FullStack</li>
                     <li onClick={() => filterProject('4', "react")} className={`${showactive === '4' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>React</li>
                     <li onClick={() => filterProject('5', "next")} className={`${showactive === '5' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>Next</li>
+                    <li onClick={() => filterProject('6', "backEnd")} className={`${showactive === '6' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>BackEnd</li>
+                    <li onClick={() => filterProject('2', "javascript")} className={`${showactive === '2' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>Java Script</li>
+                    <li onClick={() => filterProject('3', "html")} className={`${showactive === '3' ? 'dark:bg-slate-600 bg-slate-700 text-slate-300' : ''} w-full cursor-pointer md:w-5/12 xl:w-full py-3 dark:bg-[#252529] rounded-2xl mb-2 border border-[#36363b] hover:tracking-widest hover:text-[#2bd5b6] duration-200`}>HTML & CSS</li>
                 </ul>
             </motion.div>
             <AnimatePresence>

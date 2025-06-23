@@ -54,7 +54,7 @@ export default function Hero() {
 
     return (
         <div>
-            <section className='flex flex-wrap mt-20 md:p-16 lg:p-10 p-2'>
+            <section id='about' className='flex flex-wrap mt-20 md:p-16 lg:p-10 p-2'>
                 <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='w-full lg:w-3/5'>
                     <div className='flex items-end mb-10'>
                         <img onClick={() => setIsOpen(!isOpen)} className='cursor-pointer w-40 rounded-full border border-[#414148]' src={mainPhoto} alt="main Img" />
@@ -78,7 +78,7 @@ export default function Hero() {
                 </div>
             </section>
             <motion.div initial={{ y: 100 }} whileHover={{ scale: 1.15 }} whileInView={{ y: 0 }} transition={{ duration: .5 }} ref={cvOut} className={`hidden w-3/4 justify-center bottom-20 z-[9999]`}>
-                <a href='Abdalrhman Mohamed.pdf' download={true} className='w-2/3 from-slate-400 to-emerald-400 hover:from-emerald-400 hover:to-slate-400 font-semibold lg:w-1/4 text-center bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
+                <a href='Abdalrhman-Mohamed-FullStack.pdf' download={true} className='w-2/3 from-slate-400 to-emerald-400 hover:from-emerald-400 hover:to-slate-400 font-semibold lg:w-1/4 text-center bg-gradient-to-r dark:from-slate-700 dark:to-emerald-800 dark:hover:from-emerald-800 dark:hover:to-slate-700 rounded-lg px-10 py-4'>Download CV</a>
             </motion.div>
         </div>
     )
